@@ -14,8 +14,14 @@ const App = () => {
   {id: "9", nomi: "premium salat", img: "./https://malzers.de/mediacache/_processed_/9/b/csm_36C57397-B8B2-4653-918A-E2FF5353CCCB_WEBSHOP_01_a77a7e3c50.jpg"},
 ]
   return (
-    <div>
-
+    <div className='ota'>
+      {product.map((item)=>(
+        <div className='card'>
+          <img src={item.img} alt="" />
+          <h1>{item.nomi}</h1>
+          <p>{item.id}</p>
+        </div>
+      ))}
     </div>
   )
 }
